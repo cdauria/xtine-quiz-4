@@ -1,0 +1,72 @@
+.clickableButtons {
+  background-color: rgb(0, 0, 0); /* Set the background color to black */
+  border: 2px solid #00f3ff; /* Add a glowing blue border */
+  border-radius: 15px; /* Add rounded corners for a more button-like appearance */
+  outline: none;
+  padding: 20px;
+  margin: 20px; 
+  margin-bottom: 20px;
+  position: relative;
+  max-height: 100%;
+  font-size: 25px;
+  color: #00f3ff; /* Neon blue color for the font */
+  font-family: sans-serif; /* Use a sans-serif font */
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, text-shadow 0.2s ease-in-out;
+  font-weight: 600;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 3;
+  align-items: center;
+  justify-content: center;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Add the glowing effect only to the border */
+.clickableButtons:hover {
+  border: 2px solid #00f3ff, 0 0 5px #00f3ff, 0 0 10px #00f3ff, 0 0 20px #00f3ff;
+}
+
+/* When the button is clicked, reduce the glowing effect */
+.clickableButtons:active {
+  border: 2px solid #00f3ff, 0 0 2px #00f3ff, 0 0 4px #00f3ff, 0 0 8px #00f3ff;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: row; /* Display the question groups side by side */
+  gap: 20px; /* Add spacing between question groups */
+}
+
+.questionGroup {
+  display: flex;
+  flex-direction: row; /* Stack questions vertically within each group */
+  gap: 20px; /* Add spacing between questions within each group */
+}
+
+.clickableButtonsContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.clickableButtons:active {
+  border: 2px solid #00f3ff, 0 0 2px #00f3ff, 0 0 4px #00f3ff, 0 0 8px #00f3ff;
+  background-color: hotpink; /* Add hot pink color when clicked */
+  color: #00f3ff; /* Change the font color to black when clicked */
+}
+
+/* Add the hot pink color when the button is selected */
+.clickableButtons.selected {
+  background-color: hotpink;
+  color: #00f3ff;
+}
+
